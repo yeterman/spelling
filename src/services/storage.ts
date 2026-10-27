@@ -96,13 +96,13 @@ export function pickNextWord(
 
   if (currentWordId && !recentSessionWordIds.includes(currentWordId)) {
     recentSessionWordIds.unshift(currentWordId);
-    if (recentSessionWordIds.length > 40) {
+    if (recentSessionWordIds.length > 120) {
       recentSessionWordIds.pop();
     }
   }
 
-  // Avoid repeating any of the last N words (up to 30 words or 65% of active pool)
-  const cooldownCount = Math.min(30, Math.max(1, Math.floor(words.length * 0.65)));
+  // Avoid repeating any of the last N words (up to 80 words or 70% of active pool)
+  const cooldownCount = Math.min(80, Math.max(1, Math.floor(words.length * 0.7)));
   const recentHistoryWords = new Set(
     profile.history.slice(0, cooldownCount).map((h) => h.word)
   );
@@ -142,7 +142,7 @@ export function pickNextWord(
     if (random <= 0) {
       const chosen = pool[i];
       recentSessionWordIds.unshift(chosen.id);
-      if (recentSessionWordIds.length > 40) recentSessionWordIds.pop();
+      if (recentSessionWordIds.length > 120) recentSessionWordIds.pop();
       return chosen;
     }
   }
