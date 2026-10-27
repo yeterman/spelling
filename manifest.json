@@ -1,0 +1,9 @@
+{
+  "name": "אלופת הכתיב - אימון כתיב בעברית",
+  "short_name": "אלופת הכתיב",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait"
+}
