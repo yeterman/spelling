@@ -84,6 +84,8 @@ export function getAllActiveWords(
   return filtered.length > 0 ? filtered : all;
 }
 
+const recentSessionWordIds: string[] = [];
+
 export function pickNextWord(
   words: WordEntry[],
   profile: PlayerProfile,
@@ -92,21 +94,44 @@ export function pickNextWord(
   if (words.length === 0) return DEFAULT_WORDS[0];
   if (words.length === 1) return words[0];
 
-  const candidates = words.filter((w) => w.id !== currentWordId);
-  const pool = candidates.length > 0 ? candidates : words;
+  if (currentWordId && !recentSessionWordIds.includes(currentWordId)) {
+    recentSessionWordIds.unshift(currentWordId);
+    if (recentSessionWordIds.length > 40) {
+      recentSessionWordIds.pop();
+    }
+  }
+
+  // Avoid repeating any of the last N words (up to 30 words or 65% of active pool)
+  const cooldownCount = Math.min(30, Math.max(1, Math.floor(words.length * 0.65)));
+  const recentHistoryWords = new Set(
+    profile.history.slice(0, cooldownCount).map((h) => h.word)
+  );
+  const recentIds = new Set(recentSessionWordIds.slice(0, cooldownCount));
+  if (currentWordId) recentIds.add(currentWordId);
+
+  const nonRecentCandidates = words.filter(
+    (w) => !recentIds.has(w.id) && !recentHistoryWords.has(w.word)
+  );
+  const fallbackCandidates = words.filter((w) => w.id !== currentWordId);
+  const pool =
+    nonRecentCandidates.length > 0
+      ? nonRecentCandidates
+      : fallbackCandidates.length > 0
+      ? fallbackCandidates
+      : words;
 
   // Weight calculation:
-  // - Never seen words get high weight (3.0)
-  // - Words with mistakes get highest weight (4.5)
-  // - Words with high streak get lower weight (0.7) so she practices tricky ones more
+  // - Never seen words get highest priority (6.0) so she sees all words before repeating
+  // - Words with mistakes get high weight (5.0) once their cooldown expires
+  // - Words already mastered (streak >= 2) get low weight (0.5)
   const weights = pool.map((w) => {
     const stat = profile.wordStats[w.id];
-    if (!stat || stat.attempts === 0) return 3.0;
+    if (!stat || stat.attempts === 0) return 6.0;
     const accuracy = stat.correct / stat.attempts;
     if (accuracy < 0.6) return 5.0;
-    if (stat.streak === 0) return 4.0;
-    if (stat.streak >= 3) return 0.8;
-    return 2.0;
+    if (stat.streak === 0) return 4.5;
+    if (stat.streak >= 2) return 0.5;
+    return 1.5;
   });
 
   const totalWeight = weights.reduce((acc, val) => acc + val, 0);
@@ -115,11 +140,16 @@ export function pickNextWord(
   for (let i = 0; i < pool.length; i++) {
     random -= weights[i];
     if (random <= 0) {
-      return pool[i];
+      const chosen = pool[i];
+      recentSessionWordIds.unshift(chosen.id);
+      if (recentSessionWordIds.length > 40) recentSessionWordIds.pop();
+      return chosen;
     }
   }
 
-  return pool[Math.floor(Math.random() * pool.length)];
+  const fallback = pool[Math.floor(Math.random() * pool.length)];
+  recentSessionWordIds.unshift(fallback.id);
+  return fallback;
 }
 
 // Encode custom words into a shareable URL parameter for WhatsApp sharing
