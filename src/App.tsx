@@ -203,6 +203,9 @@ export function App() {
     }
     speakHebrew(currentWord.vocalized, {
       slow,
+      audioUrl: !currentWord.isCustom
+        ? `./audio/words/${currentWord.id}.mp3`
+        : undefined,
       onEnd: () => setIsSpeaking(false),
     });
   };
@@ -215,6 +218,9 @@ export function App() {
       startTimer();
     }
     speakHebrew(currentWord.sentenceTts, {
+      audioUrl: !currentWord.isCustom
+        ? `./audio/sentences/${currentWord.id}.mp3`
+        : undefined,
       onEnd: () => setIsSpeaking(false),
     });
   };
@@ -252,6 +258,9 @@ export function App() {
           }
         }, 100);
         speakHebrew(next.vocalized, {
+          audioUrl: !next.isCustom
+            ? `./audio/words/${next.id}.mp3`
+            : undefined,
           onEnd: () => setIsSpeaking(false),
         });
       }, 180);
@@ -452,7 +461,11 @@ export function App() {
   const handleStartRetry = () => {
     setTyped('');
     setPhase('retry');
-    speakHebrew(currentWord.vocalized);
+    speakHebrew(currentWord.vocalized, {
+      audioUrl: !currentWord.isCustom
+        ? `./audio/words/${currentWord.id}.mp3`
+        : undefined,
+    });
   };
 
   // In-game Hints (Spend coins without breaking streak)
@@ -852,7 +865,14 @@ export function App() {
 
               <button
                 type="button"
-                onClick={() => speakHebrew(currentWord.vocalized, { slow: true })}
+                onClick={() =>
+                  speakHebrew(currentWord.vocalized, {
+                    slow: true,
+                    audioUrl: !currentWord.isCustom
+                      ? `./audio/words/${currentWord.id}.mp3`
+                      : undefined,
+                  })
+                }
                 className="p-2.5 rounded-2xl bg-slate-900/80 text-indigo-300 border border-white/10"
               >
                 <Volume2 className="w-5 h-5" />

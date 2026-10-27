@@ -44,9 +44,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "h-2",
     "word": "כל",
-    "vocalized": "כָּל",
+    "vocalized": "כָּל־",
     "sentence": "___ התלמידים בכיתה יצאו להפסקה.",
-    "sentenceTts": "כָּל התלמידים בכיתה יצאו להפסקה.",
+    "sentenceTts": "כָּל־ התלמידים בכיתה יצאו להפסקה.",
     "hintEmoji": "👥 כולם, 100% מהקבוצה",
     "spellingTip": "כל נכתב באות כ׳ ובלי ו׳ כשנסמך למילה אחריו.",
     "category": "homophones"
@@ -714,9 +714,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "h-69",
     "word": "דוב",
-    "vocalized": "דּוֹב",
+    "vocalized": "דֹּב",
     "sentence": "ה___ החום אוהב לאכול דבש ודגים.",
-    "sentenceTts": "הדּוֹב החום אוהב לאכול דבש ודגים.",
+    "sentenceTts": "הדֹּב החום אוהב לאכול דבש ודגים.",
     "hintEmoji": "🐻 חיה גדולה ופרוותית",
     "spellingTip": "דוב בכתיב מלא נכתב עם ו׳ (ד-ו-ב).",
     "category": "homophones"
@@ -774,9 +774,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "h-75",
     "word": "ציפור",
-    "vocalized": "צִיפּוֹר",
+    "vocalized": "צִפּוֹר",
     "sentence": "שמענו ___ מצייצת על ענף העץ בבוקר.",
-    "sentenceTts": "שמענו צִיפּוֹר מצייצת על ענף העץ בבוקר.",
+    "sentenceTts": "שמענו צִפּוֹר מצייצת על ענף העץ בבוקר.",
     "hintEmoji": "🐦 בעל כנף שעף בשמיים",
     "spellingTip": "ציפור בכתיב מלא נכתבת עם י׳ (צ-י-פ-ו-ר).",
     "category": "homophones"
@@ -994,9 +994,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "h-97",
     "word": "עגבנייה",
-    "vocalized": "עַגְבָנִיָּה",
+    "vocalized": "עַגְבָנִיָּה",
     "sentence": "הוספנו ___ אדומה לסלט הירקות.",
-    "sentenceTts": "הוספנו עַגְבָנִיָּה אדומה לסלט הירקות.",
+    "sentenceTts": "הוספנו עַגְבָנִיָּה אדומה לסלט הירקות.",
     "hintEmoji": "🍅 ירק/פרי אדום ועגול לסלט",
     "spellingTip": "עגבנייה בכתיב מלא: מתחילה ב-ע׳ ונכתבת עם שני י׳ לפני ה-ה׳!",
     "category": "homophones"
@@ -1274,9 +1274,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-25",
     "word": "עיתון",
-    "vocalized": "עִיתּוֹן",
+    "vocalized": "עִתּוֹן",
     "sentence": "קראנו כתבה מעניינת ב___ של שבת.",
-    "sentenceTts": "קראנו כתבה מעניינת בעִיתּוֹן של שבת.",
+    "sentenceTts": "קראנו כתבה מעניינת בעִתּוֹן של שבת.",
     "hintEmoji": "📰 דפים מודפסים עם חדשות",
     "spellingTip": "עיתון בא מהמילה \"עת\" — מתחיל ב-ע׳.",
     "category": "gutturals"
@@ -1454,9 +1454,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-43",
     "word": "אומץ",
-    "vocalized": "אוֹמֶץ",
+    "vocalized": "אֹמֶץ",
     "sentence": "הכבאי גילה ___ לב רב בעבודתו.",
-    "sentenceTts": "הכבאי גילה אוֹמֶץ לב רב בעבודתו.",
+    "sentenceTts": "הכבאי גילה אֹמֶץ לב רב בעבודתו.",
     "hintEmoji": "🦁 גבורה ואי-פחד",
     "spellingTip": "אומץ מתחיל ב-א׳ ומסתיים ב-ץ סופית.",
     "category": "gutturals"
@@ -1464,9 +1464,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-44",
     "word": "אושר",
-    "vocalized": "אוֹשֶׁר",
+    "vocalized": "אֹשֶׁר",
     "sentence": "החיוך שלה הביא המון ___ ושמחה.",
-    "sentenceTts": "החיוך שלה הביא המון אוֹשֶׁר ושמחה.",
+    "sentenceTts": "החיוך שלה הביא המון אֹשֶׁר ושמחה.",
     "hintEmoji": "😊 שמחה גדולה בלב",
     "spellingTip": "אושר מתחיל באות א׳ (א-ו-ש-ר).",
     "category": "gutturals"
@@ -1474,9 +1474,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-45",
     "word": "עושר",
-    "vocalized": "עוֹשֶׁר",
+    "vocalized": "עֹשֶׁר",
     "sentence": "המלך באגדה חי ב___ רב עם זהב ויהלומים.",
-    "sentenceTts": "המלך באגדה חי בעוֹשֶׁר רב עם זהב ויהלומים.",
+    "sentenceTts": "המלך באגדה חי בעֹשֶׁר רב עם זהב ויהלומים.",
     "hintEmoji": "💎 כסף ורכוש רב (עשיר)",
     "spellingTip": "עושר (של עשיר) מתחיל באות ע׳!",
     "category": "gutturals"
@@ -1554,9 +1554,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-53",
     "word": "אימון",
-    "vocalized": "אִימּוּן",
+    "vocalized": "אִמּוּן",
     "sentence": "הלכתי ל___ כדורסל באולם הספורט.",
-    "sentenceTts": "הלכתי לאִימּוּן כדורסל באולם הספורט.",
+    "sentenceTts": "הלכתי לאִמּוּן כדורסל באולם הספורט.",
     "hintEmoji": "🏀 תרגול ספורטיבי (להתאמן)",
     "spellingTip": "אימון בכתיב מלא נכתב א-י-מ-ו-ן.",
     "category": "gutturals"
@@ -1614,9 +1614,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-59",
     "word": "אוזן",
-    "vocalized": "אוֹזֶן",
+    "vocalized": "אֹזֶן",
     "sentence": "הקשבנו למוזיקה השקטה ב___ קשבת.",
-    "sentenceTts": "הקשבנו למוזיקה השקטה באוֹזֶן קשבת.",
+    "sentenceTts": "הקשבנו למוזיקה השקטה באֹזֶן קשבת.",
     "hintEmoji": "👂 איבר השמיעה",
     "spellingTip": "אוזן בכתיב מלא נכתבת א-ו-ז-ן.",
     "category": "gutturals"
@@ -1744,9 +1744,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-72",
     "word": "עוגייה",
-    "vocalized": "עוּגִיָּה",
+    "vocalized": "עוּגִיָּה",
     "sentence": "אכלתי ___ פריכה לצד כוס התה.",
-    "sentenceTts": "אכלתי עוּגִיָּה פריכה לצד כוס התה.",
+    "sentenceTts": "אכלתי עוּגִיָּה פריכה לצד כוס התה.",
     "hintEmoji": "🍪 מאפה קטן ומתוק",
     "spellingTip": "עוגייה בכתיב מלא נכתבת עם שני י׳ לפני ה-ה׳!",
     "category": "gutturals"
@@ -1764,9 +1764,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-74",
     "word": "ערימה",
-    "vocalized": "עֲרֵימָה",
+    "vocalized": "עֲרֵמָה",
     "sentence": "סידרנו את הספרים ב___ מסודרת על השולחן.",
-    "sentenceTts": "סידרנו את הספרים בעֲרֵימָה מסודרת על השולחן.",
+    "sentenceTts": "סידרנו את הספרים בעֲרֵמָה מסודרת על השולחן.",
     "hintEmoji": "📚 גל או אוסף של דברים זה על זה",
     "spellingTip": "ערימה בכתיב מלא נכתבת ע-ר-י-מ-ה.",
     "category": "gutturals"
@@ -1794,9 +1794,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-77",
     "word": "עוצמה",
-    "vocalized": "עוֹצְמָה",
+    "vocalized": "עָצְמָה",
     "sentence": "לגלי הים בחורף יש ___ חזקה מאוד.",
-    "sentenceTts": "לגלי הים בחורף יש עוֹצְמָה חזקה מאוד.",
+    "sentenceTts": "לגלי הים בחורף יש עָצְמָה חזקה מאוד.",
     "hintEmoji": "⚡ כוח רב וחוזק",
     "spellingTip": "עוצמה מתחילה ב-ע׳ ומסתיימת ב-ה׳.",
     "category": "gutturals"
@@ -1814,9 +1814,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-79",
     "word": "עייפות",
-    "vocalized": "עֲיֵיפוּת",
+    "vocalized": "עֲיֵפוּת",
     "sentence": "אחרי הטיול הארוך הרגשנו ___ נעימה.",
-    "sentenceTts": "אחרי הטיול הארוך הרגשנו עֲיֵיפוּת נעימה.",
+    "sentenceTts": "אחרי הטיול הארוך הרגשנו עֲיֵפוּת נעימה.",
     "hintEmoji": "🥱 תחושה שרוצים לישון (עייף)",
     "spellingTip": "עייפות בכתיב מלא נכתבת עם שני י׳ (ע-י-י-פ-ו-ת).",
     "category": "gutturals"
@@ -1894,9 +1894,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-87",
     "word": "היכרות",
-    "vocalized": "הֵיכָּרוּת",
+    "vocalized": "הֶכֵּרוּת",
     "sentence": "ביום הראשון ללימודים עשינו משחקי ___.",
-    "sentenceTts": "ביום הראשון ללימודים עשינו משחקי הֵיכָּרוּת.",
+    "sentenceTts": "ביום הראשון ללימודים עשינו משחקי הֶכֵּרוּת.",
     "hintEmoji": "👋 להכיר אנשים חדשים",
     "spellingTip": "היכרות בכתיב מלא נכתבת עם י׳ אחרי ה-ה׳ (ה-י-כ-ר-ו-ת).",
     "category": "gutturals"
@@ -2014,9 +2014,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-99",
     "word": "חוכמה",
-    "vocalized": "חוֹכְמָה",
+    "vocalized": "חָכְמָה",
     "sentence": "ספרים מוסיפים דעת ו___.",
-    "sentenceTts": "ספרים מוסיפים דעת וחוֹכְמָה.",
+    "sentenceTts": "ספרים מוסיפים דעת וחָכְמָה.",
     "hintEmoji": "🦉 תבונה ושכל (חכם)",
     "spellingTip": "חוכמה בכתיב מלא נכתבת עם ו׳ (ח-ו-כ-מ-ה).",
     "category": "gutturals"
@@ -2024,9 +2024,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "g-100",
     "word": "חופשה",
-    "vocalized": "חוּפְשָׁה",
+    "vocalized": "חֻפְשָׁה",
     "sentence": "ב___ הגדולה בקיץ נסענו לטייל בצפון.",
-    "sentenceTts": "בחוּפְשָׁה הגדולה בקיץ נסענו לטייל בצפון.",
+    "sentenceTts": "בחֻפְשָׁה הגדולה בקיץ נסענו לטייל בצפון.",
     "hintEmoji": "🏖️ ימי מנוחה וחופש",
     "spellingTip": "חופשה מתחילה ב-ח׳ ומסתיימת ב-ה׳.",
     "category": "gutturals"
@@ -2064,9 +2064,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-4",
     "word": "קהילה",
-    "vocalized": "קְהִילָּה",
+    "vocalized": "קְהִלָּה",
     "sentence": "כל תושבי השכונה התנדבו למען ה___.",
-    "sentenceTts": "כל תושבי השכונה התנדבו למען הקְהִילָּה.",
+    "sentenceTts": "כל תושבי השכונה התנדבו למען הקְהִלָּה.",
     "hintEmoji": "🏘️ קבוצת אנשים שחיים יחד",
     "spellingTip": "קהילה (קהל) מתחילה ב-ק׳ ואחריה ה׳.",
     "category": "emphatics"
@@ -2094,9 +2094,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-7",
     "word": "היסטוריה",
-    "vocalized": "הִיסְטוֹרְיָה",
+    "vocalized": "הִסְטוֹרְיָה",
     "sentence": "בשיעור ___ למדנו על העת העתיקה.",
-    "sentenceTts": "בשיעור הִיסְטוֹרְיָה למדנו על העת העתיקה.",
+    "sentenceTts": "בשיעור הִסְטוֹרְיָה למדנו על העת העתיקה.",
     "hintEmoji": "🏛️ חקר העבר",
     "spellingTip": "היסטוריה נכתבת עם ה׳, ס׳ ו-ט׳.",
     "category": "emphatics"
@@ -2224,9 +2224,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-20",
     "word": "קופסה",
-    "vocalized": "קוּפְסָה",
+    "vocalized": "קֻפְסָה",
     "sentence": "שמרתי את המדבקות בתוך ___ יפה.",
-    "sentenceTts": "שמרתי את המדבקות בתוך קוּפְסָה יפה.",
+    "sentenceTts": "שמרתי את המדבקות בתוך קֻפְסָה יפה.",
     "hintEmoji": "📦 תיבה לאחסון חפצים",
     "spellingTip": "קופסה נכתבת עם ק׳, ס׳ ו-ה׳ בסוף.",
     "category": "emphatics"
@@ -2284,9 +2284,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-26",
     "word": "טלוויזיה",
-    "vocalized": "טֶלֶוִויזְיָה",
+    "vocalized": "טֶלֶוִיזְיָה",
     "sentence": "צפינו יחד בתוכנית טבע ב___.",
-    "sentenceTts": "צפינו יחד בתוכנית טבע בטֶלֶוִויזְיָה.",
+    "sentenceTts": "צפינו יחד בתוכנית טבע בטֶלֶוִיזְיָה.",
     "hintEmoji": "📺 מסך לצפייה בתוכניות",
     "spellingTip": "טלוויזיה: עם ט׳ בהתחלה ושני ו׳ באמצע.",
     "category": "emphatics"
@@ -2374,9 +2374,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-35",
     "word": "מיקרוסקופ",
-    "vocalized": "מִיקְרוֹסְקוֹפּ",
+    "vocalized": "מִקְרוֹסְקוֹפּ",
     "sentence": "התבוננו בתאים זעירים של עלה דרך ה___.",
-    "sentenceTts": "התבוננו בתאים זעירים של עלה דרך המִיקְרוֹסְקוֹפּ.",
+    "sentenceTts": "התבוננו בתאים זעירים של עלה דרך המִקְרוֹסְקוֹפּ.",
     "hintEmoji": "🔬 מכשיר שמגדיל דברים זעירים",
     "spellingTip": "מיקרוסקופ: שני ק׳, ס׳ ו-פ׳ רגילה בסוף.",
     "category": "emphatics"
@@ -2454,9 +2454,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-43",
     "word": "כינור",
-    "vocalized": "כִּינּוֹר",
+    "vocalized": "כִּנּוֹר",
     "sentence": "נגן ה___ ניגן מנגינה מרגשת באמצעות הקשת.",
-    "sentenceTts": "נגן הכִּינּוֹר ניגן מנגינה מרגשת באמצעות הקשת.",
+    "sentenceTts": "נגן הכִּנּוֹר ניגן מנגינה מרגשת באמצעות הקשת.",
     "hintEmoji": "🎻 כלי מיתר שמנגנים בו עם קשת",
     "spellingTip": "כינור בכתיב מלא מתחיל ב-כ-י (כ-י-נ-ו-ר).",
     "category": "emphatics"
@@ -2474,9 +2474,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-45",
     "word": "ספרייה",
-    "vocalized": "סִפְרִיָּה",
+    "vocalized": "סִפְרִיָּה",
     "sentence": "שאלתי שני ספרי קריאה חדשים מה___.",
-    "sentenceTts": "שאלתי שני ספרי קריאה חדשים מהסִפְרִיָּה.",
+    "sentenceTts": "שאלתי שני ספרי קריאה חדשים מהסִפְרִיָּה.",
     "hintEmoji": "📚 מקום שבו שואלים וקוראים ספרים",
     "spellingTip": "ספרייה בכתיב מלא: מתחילה ב-ס׳ ונכתבת עם שני י׳!",
     "category": "emphatics"
@@ -2504,9 +2504,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-48",
     "word": "עיפרון",
-    "vocalized": "עִיפָּרוֹן",
+    "vocalized": "עִפָּרוֹן",
     "sentence": "שרטטתי קו ישר עם סרגל ו___.",
-    "sentenceTts": "שרטטתי קו ישר עם סרגל ועִיפָּרוֹן.",
+    "sentenceTts": "שרטטתי קו ישר עם סרגל ועִפָּרוֹן.",
     "hintEmoji": "✏️ כלי כתיבה וציור מעץ",
     "spellingTip": "עיפרון בכתיב מלא מתחיל ב-ע-י ומסתיים ב-ן סופית.",
     "category": "emphatics"
@@ -2544,9 +2544,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-52",
     "word": "תיקייה",
-    "vocalized": "תִּיקִיָּה",
+    "vocalized": "תִּיקִיָּה",
     "sentence": "שמרתי את דפי העבודה בתוך ___ מסודרת.",
-    "sentenceTts": "שמרתי את דפי העבודה בתוך תִּיקִיָּה מסודרת.",
+    "sentenceTts": "שמרתי את דפי העבודה בתוך תִּיקִיָּה מסודרת.",
     "hintEmoji": "📁 אוגדן לשמירת דפים",
     "spellingTip": "תיקייה: מתחילה ב-ת׳, עם ק׳ ושני י׳ לפני ה-ה׳.",
     "category": "emphatics"
@@ -2714,9 +2714,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-69",
     "word": "שולחן",
-    "vocalized": "שׁוּלְחָן",
+    "vocalized": "שֻׁלְחָן",
     "sentence": "ערכנו את הצלחות והכוסות על ה___.",
-    "sentenceTts": "ערכנו את הצלחות והכוסות על השׁוּלְחָן.",
+    "sentenceTts": "ערכנו את הצלחות והכוסות על השֻׁלְחָן.",
     "hintEmoji": "🪑 רהיט שאוכלים או כותבים עליו",
     "spellingTip": "שולחן נכתב עם ש׳, ח׳ ו-ן סופית.",
     "category": "emphatics"
@@ -2724,9 +2724,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-70",
     "word": "כיסא",
-    "vocalized": "כִּיסֵּא",
+    "vocalized": "כִּסֵּא",
     "sentence": "ישבתי בנוחות על ה___ ליד שולחן הכתיבה.",
-    "sentenceTts": "ישבתי בנוחות על הכִּיסֵּא ליד שולחן הכתיבה.",
+    "sentenceTts": "ישבתי בנוחות על הכִּסֵּא ליד שולחן הכתיבה.",
     "hintEmoji": "🪑 רהיט לישיבה",
     "spellingTip": "כיסא בכתיב מלא: מתחיל ב-כ-י, עם ס׳ ומסתיים ב-א׳!",
     "category": "emphatics"
@@ -2804,9 +2804,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-78",
     "word": "מפתח",
-    "vocalized": "מַפְתֵּחַ",
+    "vocalized": "מִטְרִיָּה",
     "sentence": "פתחנו את נעילת הדלת באמצעות ה___.",
-    "sentenceTts": "פתחנו את נעילת הדלת באמצעות המַפְתֵּחַ.",
+    "sentenceTts": "פתחנו את נעילת הדלת באמצעות המִטְרִיָּה.",
     "hintEmoji": "🔑 פותח ונועל מנעול",
     "spellingTip": "מפתח (לפתוח) נכתב עם ת׳ ומסתיים ב-ח׳.",
     "category": "emphatics"
@@ -2974,9 +2974,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-95",
     "word": "קסדה",
-    "vocalized": "קַסְדָּה",
+    "vocalized": "בְּרֵכָה",
     "sentence": "תמיד חובשים ___ על הראש כשרכבים על אופניים.",
-    "sentenceTts": "תמיד חובשים קַסְדָּה על הראש כשרכבים על אופניים.",
+    "sentenceTts": "תמיד חובשים בְּרֵכָה על הראש כשרכבים על אופניים.",
     "hintEmoji": "🪖 מגינה על הראש ברכיבה",
     "spellingTip": "קסדה מתחילה ב-ק׳ ואחריה ס׳ (ק-ס-ד-ה).",
     "category": "emphatics"
@@ -3004,9 +3004,9 @@ export const DEFAULT_WORDS: WordEntry[] = [
   {
     "id": "e-98",
     "word": "רכבת",
-    "vocalized": "רַכֶּבֶת",
+    "vocalized": "אֳנִיָּה",
     "sentence": "נסענו ב___ המהירה מתל אביב לחיפה.",
-    "sentenceTts": "נסענו ברַכֶּבֶת המהירה מתל אביב לחיפה.",
+    "sentenceTts": "נסענו באֳנִיָּה המהירה מתל אביב לחיפה.",
     "hintEmoji": "🚆 נוסעת על מסילת ברזל",
     "spellingTip": "רכבת נכתבת עם כ׳ ומסתיימת ב-ת׳.",
     "category": "emphatics"
