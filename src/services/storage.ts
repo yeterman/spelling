@@ -22,6 +22,7 @@ export const INITIAL_PROFILE: PlayerProfile = {
   enabledCategories: ['homophones', 'gutturals', 'emphatics', 'custom'],
   wordStats: {},
   history: [],
+  retryQueue: [],
 };
 
 export function loadProfile(): PlayerProfile {
@@ -38,6 +39,7 @@ export function loadProfile(): PlayerProfile {
       ...parsed,
       wordStats: parsed.wordStats || {},
       history: parsed.history || [],
+      retryQueue: parsed.retryQueue || [],
       unlockedItems: parsed.unlockedItems || INITIAL_PROFILE.unlockedItems,
       enabledCategories:
         validCategories.length > 0
@@ -98,6 +100,19 @@ export function pickNextWord(
     recentSessionWordIds.unshift(currentWordId);
     if (recentSessionWordIds.length > 120) {
       recentSessionWordIds.pop();
+    }
+  }
+
+  // 1. Check if a word that had a mistake is due for its 5-8 word retry!
+  const retryQueue = profile.retryQueue || [];
+  for (const item of retryQueue) {
+    if (item.turnsRemaining <= 0 && item.wordId !== currentWordId) {
+      const dueWord = words.find((w) => w.id === item.wordId);
+      if (dueWord) {
+        recentSessionWordIds.unshift(dueWord.id);
+        if (recentSessionWordIds.length > 120) recentSessionWordIds.pop();
+        return dueWord;
+      }
     }
   }
 

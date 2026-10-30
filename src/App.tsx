@@ -390,33 +390,43 @@ export function App() {
         coinsEarned: totalCoins,
       };
 
-      setProfile((prev) => ({
-        ...prev,
-        coins: prev.coins + totalCoins,
-        xp: prev.xp + 25,
-        currentStreak: newStreak,
-        bestStreak: newBestStreak,
-        totalSolved: prev.totalSolved + 1,
-        totalAttempts: prev.totalAttempts + 1,
-        fastestTimeMs: isNewFastest ? finalTimeMs : prev.fastestTimeMs,
-        recentTimesMs: [finalTimeMs, ...prev.recentTimesMs.slice(0, 29)],
-        wordStats: {
-          ...prev.wordStats,
-          [currentWord.id]: {
-            attempts: prevWordStat.attempts + 1,
-            correct: prevWordStat.correct + 1,
-            streak: prevWordStat.streak + 1,
-            bestTimeMs:
-              prevWordStat.bestTimeMs === null
-                ? finalTimeMs
-                : Math.min(prevWordStat.bestTimeMs, finalTimeMs),
-            lastSeen: Date.now(),
+      setProfile((prev) => {
+        const updatedQueue = (prev.retryQueue || [])
+          .filter((item) => item.wordId !== currentWord.id)
+          .map((item) => ({
+            ...item,
+            turnsRemaining: item.turnsRemaining - 1,
+          }));
+
+        return {
+          ...prev,
+          coins: prev.coins + totalCoins,
+          xp: prev.xp + 25,
+          currentStreak: newStreak,
+          bestStreak: newBestStreak,
+          totalSolved: prev.totalSolved + 1,
+          totalAttempts: prev.totalAttempts + 1,
+          fastestTimeMs: isNewFastest ? finalTimeMs : prev.fastestTimeMs,
+          recentTimesMs: [finalTimeMs, ...prev.recentTimesMs.slice(0, 29)],
+          wordStats: {
+            ...prev.wordStats,
+            [currentWord.id]: {
+              attempts: prevWordStat.attempts + 1,
+              correct: prevWordStat.correct + 1,
+              streak: prevWordStat.streak + 1,
+              bestTimeMs:
+                prevWordStat.bestTimeMs === null
+                  ? finalTimeMs
+                  : Math.min(prevWordStat.bestTimeMs, finalTimeMs),
+              lastSeen: Date.now(),
+            },
           },
-        },
-        history: [record, ...prev.history.slice(0, 49)],
-      }));
+          history: [record, ...prev.history.slice(0, 49)],
+          retryQueue: updatedQueue,
+        };
+      });
     } else {
-      // Mistake!
+      // Mistake! Schedule this word to return in 5 to 8 words
       playMistakeSound();
       setLastTypedMistake(finalTyped);
       setPhase('mistake');
@@ -439,21 +449,36 @@ export function App() {
         coinsEarned: 0,
       };
 
-      setProfile((prev) => ({
-        ...prev,
-        currentStreak: 0,
-        totalAttempts: prev.totalAttempts + 1,
-        wordStats: {
-          ...prev.wordStats,
-          [currentWord.id]: {
-            ...prevWordStat,
-            attempts: prevWordStat.attempts + 1,
-            streak: 0,
-            lastSeen: Date.now(),
+      const retryDelay = Math.floor(Math.random() * 4) + 5; // 5 to 8 words
+
+      setProfile((prev) => {
+        const otherQueued = (prev.retryQueue || [])
+          .filter((item) => item.wordId !== currentWord.id)
+          .map((item) => ({
+            ...item,
+            turnsRemaining: item.turnsRemaining - 1,
+          }));
+
+        return {
+          ...prev,
+          currentStreak: 0,
+          totalAttempts: prev.totalAttempts + 1,
+          wordStats: {
+            ...prev.wordStats,
+            [currentWord.id]: {
+              ...prevWordStat,
+              attempts: prevWordStat.attempts + 1,
+              streak: 0,
+              lastSeen: Date.now(),
+            },
           },
-        },
-        history: [record, ...prev.history.slice(0, 49)],
-      }));
+          history: [record, ...prev.history.slice(0, 49)],
+          retryQueue: [
+            ...otherQueued,
+            { wordId: currentWord.id, turnsRemaining: retryDelay },
+          ],
+        };
+      });
     }
   };
 

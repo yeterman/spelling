@@ -44,6 +44,11 @@ export interface ShopItem {
   previewClass?: string;
 }
 
+export interface ScheduledRetry {
+  wordId: string;
+  turnsRemaining: number;
+}
+
 export interface PlayerProfile {
   name: string;
   coins: number;
@@ -62,4 +67,5 @@ export interface PlayerProfile {
   enabledCategories: WordCategory[];
   wordStats: Record<string, WordStats>;
   history: AttemptRecord[];
+  retryQueue?: ScheduledRetry[];
 }
